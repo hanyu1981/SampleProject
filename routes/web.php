@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('registration','RegistrationController@Start');
+Route::get('registration','RegistrationController@Start');
