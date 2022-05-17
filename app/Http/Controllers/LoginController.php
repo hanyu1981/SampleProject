@@ -10,7 +10,7 @@ class LoginController extends Controller
 	{
 		$user_id = $request->user_id;
 		
-		$response = arrau();
+		$response = array();
 		
 		return $response;
 	}
