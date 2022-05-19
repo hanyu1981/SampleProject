@@ -1,6 +1,6 @@
 <?php
-namespace App/Libs;
-use App/MasterLoginItem;
+namespace App\Libs;
+use App\MasterLoginItem;
 
 class MasterDataService
 {

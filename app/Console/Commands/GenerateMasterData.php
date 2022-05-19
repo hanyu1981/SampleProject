@@ -1,7 +1,7 @@
 <?php
-namespace App/Console/Commands;
-use Illuminate/Console/Command;
-use App/Libs/MasterDataService;
+namespace App\Console\Commands;
+use Illuminate\Console\Command;
+use App\Libs\MasterDataService;
 
 class GenerateMasterData extends Command
 {
