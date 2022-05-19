@@ -44,7 +44,7 @@ class ChangeNameController extends Controller
 			return json_encode($response);
 		}
 		
-		$response = array('result' => 'Success', 'userprofile' => $user_profile);
+		$response = array('result' => 'Success', 'user_profile' => $user_profile);
 		return json_encode($response);
 	}
 }
