@@ -15,7 +15,8 @@ class ChangeNameController extends Controller
 		if($client_master_version < config('constants.MASTER_DATA_VERSION'))
 		{
 			//エラー返却
-			return config('error.ERROR_MASTER_DATA_UPDATE');
+			$response = array('result' => 'Error', 'error_code' => config('error.ERROR_MASTER_DATA_UPDATE') );
+			return json_encode($response);
 		}
 		
 		//文字列長のチェック
@@ -50,7 +51,7 @@ class ChangeNameController extends Controller
 			return json_encode($response);
 		}
 		
-		$response = array('result' => 'Success', 'user_profile' => $user_profile);
+		$response = array('result' => 'Success', 'error_code' => 0, 'user_profile' => $user_profile);
 		return json_encode($response);
 	}
 }
