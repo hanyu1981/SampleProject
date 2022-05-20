@@ -13,6 +13,8 @@ class MasterDataController extends Controller
     	$master_login_item = MasterLoginItem::GetMasterLoginItem();
     	
     	$response = array(
+    		'result' => 'Success',
+    		'error_code' => 0,
     		'master_data_version' => config('constants.MASTER_DATA_VERSION'),
     		'master_login_item' => $master_login_item,
     	);
