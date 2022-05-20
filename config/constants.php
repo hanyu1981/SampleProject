@@ -1,5 +1,5 @@
 <?php
 
-return array)
+return array(
 	'MASTER_DATA_VERSION' => 22,
 );
