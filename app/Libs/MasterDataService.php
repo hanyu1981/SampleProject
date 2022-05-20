@@ -18,7 +18,7 @@ class MasterDataService
 	
 	public static function GetMasterData($data_name)
 	{
-		$file = fopen(__DIR__ . '.' . config('constants.MASTER_DATA_VERSION'),'r');
+		$file = fopen(__DIR__ . '/' . config('constants.MASTER_DATA_VERSION'),'r');
 		if( !$file )
 		{
 			return false;
@@ -36,6 +36,6 @@ class MasterDataService
 	}
 	public static function CheckMasterDataVersion($client_master_version)
 	{
-		return config('constants.MASTER_DATA_VERSION') <= $client_master_version );
+		return config('constants.MASTER_DATA_VERSION') <= $client_master_version;
 	}
 }
