@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::get('registration','RegistrationController@Start');
 Route::get('login','LoginController@Start');
 Route::get('name','ChangeNameController@Start');
+Route::resource('maaster_data','MasterDataController@Get');
