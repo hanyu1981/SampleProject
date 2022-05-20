@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\MasterLoginItem;
-use App\Libs\MasterDataService.php;
+use App\Libs\MasterDataService;
 
 class MasterDataController extends Controller
 {
@@ -24,8 +24,8 @@ class MasterDataController extends Controller
 	
 	public function GetSize(Request $request)
 	{
-		$size_bytes = MasterLoginItem::GetMasterDataSize();
+		$size_bytes = MasterDataService::GetMasterDataSize();
 		$response = array('size_bytes' => $size_bytes);
-		return $size_bytes;
+		return json_encode($response);
 	}
 }
