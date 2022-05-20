@@ -19,3 +19,4 @@ Route::get('registration','RegistrationController@Start');
 Route::get('login','LoginController@Start');
 Route::get('name','ChangeNameController@Start');
 Route::get('master_data','MasterDataController@Get');
+Route::get('master_data_size','MasterDataController@GetSize');

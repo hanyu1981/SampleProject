@@ -38,4 +38,10 @@ class MasterDataService
 	{
 		return config('constants.MASTER_DATA_VERSION') <= $client_master_version;
 	}
+	public static function GetMasterDataSize()
+	{
+		$size = filesize(__DIR__ . '/' . config('constants.MASTER_DATA_VERSION'));
+		$size_bytes = floatval($size);
+		return $size_bytes;
+	}
 }
