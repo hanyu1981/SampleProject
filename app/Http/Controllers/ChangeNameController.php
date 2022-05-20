@@ -8,9 +8,15 @@ class ChangeNameController extends Controller
 {
 	public function Start(Request $request)
 	{
+		$client_master_version = $request->client_master_version;
 		$user_id = $request->user_id;
 		$user_name = $request->user_name;
-
+		
+		if($client_master_version < config('constants.MASTER_DATA_VERSION'))
+		{
+			//エラー返却
+			return config('error.ERROR_MASTER_DATA_UPDATE');
+		}
 		
 		//文字列長のチェック
 		if( 10 < strlen($user_name) )
